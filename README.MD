@@ -31,10 +31,10 @@ Finally, you can run the project with the following command:
 
 python main.py <order> <quantity> <ticker> <dry>
 
-<order>: The order type (buy or sell)
-<quantity>: The quantity of shares to buy or sell
-<ticker>: The stock ticker symbol
-<dry>: Set to TRUE to simulate the order (dry run mode) or FALSE to execute the order
+ORDER: The order type (buy or sell)
+QUANTITY: The quantity of shares to buy or sell
+TICKER: The stock ticker symbol
+DRY: Set to TRUE to simulate the order (dry run mode) or FALSE to execute the order
 
 
 It will ask you a code from your phone, enter the code and you are good to go.
