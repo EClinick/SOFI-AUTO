@@ -12,7 +12,7 @@ git clone <https://github.com/EClinick/SOFI-AUTO>
 3. Install Dependencies
 Navigate to the project directory and install the required dependencies using pip:
 
-```bash pip install -r requirements.txt ```
+```pip install -r requirements.txt ```
  
 
 4. Set Up Environment Variables
@@ -28,7 +28,7 @@ Replace your_username and your_password with your actual username and password.
 5. Run the Project
 Finally, you can run the project with the following command:
 
-```bash python main.py ORDER QUANTITY TICKER DRY ```
+```python main.py ORDER QUANTITY TICKER DRY ```
 
 ORDER: The order type (buy or sell)
 QUANTITY: The quantity of shares to buy or sell
