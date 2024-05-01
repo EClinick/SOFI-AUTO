@@ -20,9 +20,8 @@ Copy the .env.example file and rename the copy to .env. Then, open the .env file
 
 Open .env file and update the variables:
 
-```USER=your_username
-PASSWORD=your_password
-```
+USER='your_username'
+PASSWORD='your_password'
 
 Replace your_username and your_password with your actual username and password.
 
@@ -37,9 +36,9 @@ TICKER: The stock ticker symbol
 DRY: Set to TRUE to simulate the order (dry run mode) or FALSE to execute the order
 
 
-It will ask you a code from your phone, enter the code and you are good to go.
+It will ask you for a code from your phone, enter the code and you are good to go.
 
-Don't worry if the code doesn't fit in one line, selenium will cut it off sometimes but it will stil work.
+Don't worry if the code doesn't fit in one line, selenium will cut it off sometimes but it will still work.
 
 Example:
 
