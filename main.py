@@ -16,7 +16,6 @@ load_dotenv()
 URL='https://login.sofi.com/u/login?state=hKFo2SBiMkxuWUxGckdxdVJ0c3BKLTlBdEk1dFgwQnZCcWo0ZKFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIHdDekRxWk81cURTYWVZOVJleEJORE9vMExBVFVjMEw2o2NpZNkgNkxuc0xDc2ZGRUVMbDlTQzBDaWNPdkdlb2JvZXFab2I'
 USERNAME=os.getenv('USER')
 PASSWORD=os.getenv('PASSWORD')
-print("USERNAME:", USERNAME, "PASSWORD:",PASSWORD)
 
 chrome_options = Options()
 #chrome_options.add_argument("--headless")
