@@ -28,7 +28,7 @@ Replace your_username and your_password with your actual username and password.
 5. Run the Project
 Finally, you can run the project with the following command:
 
-python main.py <order> <quantity> <ticker> <dry>
+```bash python main.py ORDER QUANTITY TICKER DRY ```
 
 ORDER: The order type (buy or sell)
 QUANTITY: The quantity of shares to buy or sell
