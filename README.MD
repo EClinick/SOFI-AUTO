@@ -48,7 +48,7 @@ Please enter code and press ENTER to continue:0Created TensorFlow Lite XNNPACK d
 89602 
 ```
 
-#Example of running the program:
+# Example of running the program:
 
 ```bash python main.py buy 10 AAPL TRUE ```
 
