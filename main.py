@@ -81,6 +81,7 @@ def submittingOrders(ORDER, QUANTITY, TICKERS, DRY):
             WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.XPATH, "//*[@id='page-wrap']/div[1]/div/div/div/ul/li")))
             dropdown_items = driver.find_elements(By.XPATH, "//*[@id='page-wrap']/div[1]/div/div/div/ul/li")
             total_items = len(dropdown_items)
+            
         except TimeoutException:
             try:
                 invest_search_field=WebDriverWait(driver, 20).until(
@@ -93,20 +94,23 @@ def submittingOrders(ORDER, QUANTITY, TICKERS, DRY):
                 print("Search field not found")
                 return
         #//*[@id="mainContent"]/div[2]/div[2]/div[2]/div[1]/div/div/ul/li
-
+       
         if total_items == 0:
             print("No stock found")
             return
         else:
             found_stock = False
             for item in dropdown_items:
+                #//*[@id="page-wrap"]/div[1]/div/div/div/ul/li[1]/a/div
                 ticker_name = item.find_element(By.XPATH, "./a/div/p[1]").text
-                if ticker_name == TICKER:
+                
+                if ticker_name in TICKER:
+                    print("Stock found")
                     found_stock = True
                     item.click()
                     Ordering(ORDER, QUANTITY, TICKER, DRY)
                     break
-
+           
             if not found_stock:
                 print("SOFI DOESN'T HAVE THIS STOCK")
                 return
@@ -146,6 +150,7 @@ def Ordering(ORDER, QUANTITY, TICKER, DRY):
                     break
             else:
                 print("All accounts have been processed.")
+                
                 break  # Exit the while loop if all accounts are processed
 
             # Input quantity and price
@@ -289,6 +294,8 @@ if __name__ == "__main__":
     ORDER=sys.argv[1]
     QUANTITY=sys.argv[2]
     TICKER=sys.argv[3].split(',')
+    TICKER = [item.upper() for item in TICKER]
+    print(TICKER)
     DRY=sys.argv[4]
     if DRY == "True" or DRY == 'TRUE' or DRY== 'true' or DRY=='T' or DRY=='t':
         DRY = 'TRUE'
